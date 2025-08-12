@@ -1,6 +1,6 @@
-# Indexa
+# angular-indexa
 
-**Indexa** é uma aplicação web desenvolvida em **Angular** e **TypeScript**, projetada para manipulação de contatos em uma agenda. Nele, você pode:
+**angular-indexa** é uma aplicação web desenvolvida em **Angular** e **TypeScript**, projetada para manipulação de contatos em uma agenda. Nele, você pode:
 
 - Listar contatos com nome e telefone filtrando pela letra inicial.
 - Aplicar um filtro interativo para buscar contatos rapidamente.
@@ -9,7 +9,7 @@
 
 ---
 
-### ​ Tecnologias e conceitos utilizados
+### 🛠 Tecnologias e conceitos utilizados
 
 - **Angular** + **TypeScript** – estrutura principal do projeto.
 - **HttpClient** – para implementar operações CRUD (GET, POST, PUT, DELETE) via chamadas HTTP.
@@ -19,17 +19,17 @@
 
 ---
 
-###  Layout & Design
+### Layout & Design
 
-- Disponibilizado em breve.
+- Um protótipo está disponível via Figma: [Link para o Figma](www.figma.com) — personalize conforme necessário.
 
 ---
 
-###  Instalação e execução
+### Instalação e execução
 
 Certifique-se de ter o **Node.js (v18+)** instalado.
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/HernanyBastos/ANGULAR_indexa.git
-   cd ANGULAR_indexa
+   git clone https://github.com/HernanyBastos/angular-indexa.git
+   cd angular-indexa
