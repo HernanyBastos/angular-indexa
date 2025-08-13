@@ -182,7 +182,9 @@ input:focus {
   justify-content: center;
   text-align: center;
   position: relative;
+  cursor: pointer;
 }
+
 
 .imagem-contato i {
   margin-top: 8px;

@@ -42,8 +42,9 @@ export class FormularioContatoComponent implements OnInit {
   inicializarFormulario(): void {
     this.contatoForm = new FormGroup({
       nome: new FormControl('', Validators.required),
+      avatar: new FormControl('', Validators.required),
       telefone: new FormControl('', Validators.required),
-      email: new FormControl('', [Validators.required, Validators.email]),
+      email: new FormControl(''),
       aniversario: new FormControl(''),
       redes: new FormControl(''),
       observacoes: new FormControl('')
@@ -74,6 +75,23 @@ export class FormularioContatoComponent implements OnInit {
       this.contatoForm.reset();
       this.router.navigateByUrl('/lista-contatos');
     });
+  }
+
+  selecionandoArquivo(event: any): void {
+    const file: File = event.target.files[0];
+    if (file) {
+      this.lerArquivo(file);
+    }
+  }
+
+  lerArquivo(file: File): void {
+    const reader = new FileReader();
+    reader.onload = (e: any) => {
+      if(reader.result) {
+        this.contatoForm.get('avatar')?.setValue(reader.result.toString());
+      }
+    };
+    reader.readAsDataURL(file);
   }
 
   cancelar() {
