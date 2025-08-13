@@ -5,6 +5,7 @@ import { InterfaceContato } from '../../componentes/contato/interfaceContato';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { ContatoService } from '../../services/contato.service';
 import { DatePipe } from '@angular/common';
+import { SeparadorComponent } from '../../componentes/separador/separador.component';
 
 @Component({
   selector: 'app-perfil-contato',
@@ -13,7 +14,8 @@ import { DatePipe } from '@angular/common';
     CommonModule,
     ContainerComponent,
     RouterLink,
-    DatePipe
+    DatePipe,
+    SeparadorComponent
   ],
   providers: [DatePipe],
   templateUrl: './perfil-contato.component.html',

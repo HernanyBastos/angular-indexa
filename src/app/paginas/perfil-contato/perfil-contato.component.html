@@ -18,12 +18,12 @@
 
 
     <section class="perfil">
+        <div class="imagem-perfil">
+            <img *ngIf="contato.avatar" [src]="contato.avatar" alt="Imagem do contato">
+            <h2><strong>{{ contato.nome }}</strong></h2>
+        </div>
+        <app-separador></app-separador>
         <ul>
-            <li>
-                <i class="material-icons">person</i>
-                <strong>Nome</strong>
-            </li>
-            <li>{{ contato.nome }}</li>
             <li>
                 <i class="material-icons">call</i>
                 <strong>Telefone</strong>
