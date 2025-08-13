@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 //Interfaces
 import { InterfaceContato } from '../componentes/contato/interfaceContato';
-import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -34,6 +34,18 @@ export class ContatoService {
   deletarContato(id: number): Observable<InterfaceContato> {
     return this.http.delete<InterfaceContato>(`${this.API_URL}/${id}`);
 }
+
+editarContato( contato: InterfaceContato): Observable<InterfaceContato> {
+    return this.http.put<InterfaceContato>(`${this.API_URL}/${contato.id}`, contato);
+  }
+
+  editarOuSalvarContato(contato: InterfaceContato): Observable<InterfaceContato> {
+    if (contato.id) {
+      return this.editarContato(contato);
+    } else {
+      return this.salvarContato(contato);
+    }
+  }
 
 }
 
